@@ -7,9 +7,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "New title output",
+      title: "Custom templete",
       hash: true,
-      filename: 'index.html'
+      filename: 'index.html',
+      myPageHeader: 'go tramp',
+      template: './src/index.html',
     })
   ],
   output: {
