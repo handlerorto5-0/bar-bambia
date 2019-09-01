@@ -5,17 +5,18 @@ module.exports = {
   entry: {
     app:'./src/index.js'
   },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './dist')
+  },
+  watch: true,
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Custom templete",
       hash: true,
+      title: "Custom templete",
       filename: 'index.html',
       myPageHeader: 'go tramp',
       template: './src/index.html',
     })
-  ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './dist')
-  }
+  ]
 };
