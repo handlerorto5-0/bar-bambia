@@ -11,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist')
   },
   watch: true,
+  resolve: { extentions: [".js", ".ts"]},
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
