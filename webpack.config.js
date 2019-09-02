@@ -16,6 +16,13 @@ let conf = {
         test: /\.js$/i,
         loader: 'babel-loader',
         //exclude: '/node_modules' // by default 
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   },
@@ -24,7 +31,7 @@ let conf = {
 
 module.exports = (env,options) => {
   let production = options.mode === 'production';
-  conf.devtool = production? 'source-map' :'eval-sourcemap';
+  conf.devtool = production? false :'eval-sourcemap';
   //console.log(options);
   return conf;
 }
