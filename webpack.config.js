@@ -3,22 +3,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: {
-    app:'./src/index.js'
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './dist')
-  },
-  watch: true,
-  resolve: { extentions: [".js", ".ts"]},
-  plugins: [
-    new HtmlWebpackPlugin({
-      hash: true,
-      title: "Custom templete",
-      filename: 'index.html',
-      myPageHeader: 'go tramp',
-      template: './src/index.html',
-    })
-  ]
+  entry: {},
+  output: {},
+  plugins: [],
 };
