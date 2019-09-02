@@ -7,6 +7,7 @@ function sum(...numbers){
 }
 
 function avg(...numbers){
+  console.log({...numbers});
   return sum(...numbers) / numbers.length;
 }
 

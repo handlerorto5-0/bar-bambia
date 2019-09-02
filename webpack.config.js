@@ -15,10 +15,16 @@ let conf = {
       {
         test: /\.js$/i,
         loader: 'babel-loader',
-        exclude: '/node_modules' // by default 
+        //exclude: '/node_modules' // by default 
       }
     ]
-  }
+  },
+  //devtool: "eval-sourcemap"
 }
 
-module.exports = conf;
+module.exports = (env,options) => {
+  let production = options.mode === 'production';
+  conf.devtool = production? 'source-map' :'eval-sourcemap';
+  //console.log(options);
+  return conf;
+}
