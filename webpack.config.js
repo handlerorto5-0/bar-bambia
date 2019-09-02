@@ -9,6 +9,15 @@ let conf = {
   },
   devServer: {
     overlay: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/i,
+        loader: 'babel-loader',
+        exclude: '/node_modules' // by default 
+      }
+    ]
   }
 }
 

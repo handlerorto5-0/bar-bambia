@@ -11,6 +11,10 @@
   "author": "excavator",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
     "webpack": "^4.39.3",
